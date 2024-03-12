@@ -1,10 +1,12 @@
-import { Inter } from "next/font/google";
+import { Mandali } from "next/font/google";
 import { Header } from "app/components/shared/Header";
 import { Footer } from "app/components/shared/Footer";
 import "app/sass/global.sass"
 
-const inter = Inter({ subsets: ["latin"] });
-
+const mandali = Mandali({
+  weight: ["400"],
+  subsets: ["latin"]
+})
 
 export default function RootLayout({
   children,
@@ -13,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={mandali.className}>
         <Header />
         
         {children}
